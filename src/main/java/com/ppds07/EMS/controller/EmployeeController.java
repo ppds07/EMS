@@ -25,7 +25,7 @@ public class EmployeeController {
     @GetMapping
     public List<Employee> getAllEmployees()
     {
-        return employeeService.getAllEmployee();
+        return employeeService.getAllEmployees();
     }
 
     // To add an employee
@@ -50,5 +50,16 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
     }
 
+    @GetMapping("/list")
+    public String getAllEmployees(Model model) {
+        List<Employee> employees = employeeService.getAllEmployees();
+        model.addAttribute("employees", employees);
+        return "employee-list"; // Ensure this matches the Thymeleaf template name
+    }
 
+    @PostMapping("/add")
+    public String addEmployee(@ModelAttribute Employee employee) {
+        employeeService.saveEmployee(employee);
+        return "redirect:/employees/list";
+    }
 }

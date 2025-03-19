@@ -14,7 +14,7 @@ public class EmployeeService {
     private EmployeeRepository employeeRepository;
 
     //  Get all the Employee Details
-    public List<Employee> getAllEmployee()
+    public List<Employee> getAllEmployees()
     {
         return employeeRepository.findAll();
     }
@@ -38,6 +38,7 @@ public class EmployeeService {
 
     }
 
+
     //To fetch employee by ID
     public Employee getEmployeeById(Long id)
     {
@@ -48,5 +49,10 @@ public class EmployeeService {
     public void deleteEmployee(Long id)
     {
         employeeRepository.deleteById(id);
+    }
+
+    // Save employee to the database
+    public void saveEmployee(Employee employee) {
+        employeeRepository.save(employee);
     }
 }

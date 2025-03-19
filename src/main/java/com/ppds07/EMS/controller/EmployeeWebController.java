@@ -26,7 +26,7 @@ public class EmployeeWebController {
     @GetMapping("/employees")
     public String showEmployeePage(Model model)
     {
-        model.addAttribute("employees", employeeService.getAllEmployee());
+        model.addAttribute("employees", employeeService.getAllEmployees());
         return "index";
     }
 
@@ -68,10 +68,10 @@ public class EmployeeWebController {
         return "redirect:/employees";
     }
 
-    @GetMapping("/dashboard")
+    @GetMapping("/employee-dashboard")
     public String showDashboard(Model model)
     {
-        List<Employee> employees = employeeService.getAllEmployee();
+        List<Employee> employees = employeeService.getAllEmployees();
 
         int totalEmployees = employees.size();
         int totalDepartments = (int) employees.stream().map(Employee::getDepartment).distinct().count();
