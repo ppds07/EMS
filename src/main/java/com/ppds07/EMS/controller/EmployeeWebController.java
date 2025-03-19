@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class EmployeeWebController {
 
@@ -64,6 +66,19 @@ public class EmployeeWebController {
     {
         employeeService.deleteEmployee(id);
         return "redirect:/employees";
+    }
+
+    @GetMapping("/dashboard")
+    public String showDashboard(Model model)
+    {
+        List<Employee> employees = employeeService.getAllEmployee();
+
+        int totalEmployees = employees.size();
+        int totalDepartments = (int) employees.stream().map(Employee::getDepartment).distinct().count();
+
+        model.addAttribute("totalEmployees", totalEmployees);
+        model.addAttribute("totalDepartments", totalDepartments);
+        return "dashboard";
     }
 
 
