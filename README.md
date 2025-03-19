@@ -1,4 +1,4 @@
-# **Employee Management System (EMS) 🚀**  
+# **Employee Management System (EMS)**  
 
 A simple **Employee Management System** built with **Spring Boot, Thymeleaf, and Bootstrap**. This application allows users to **manage employees**, including adding, editing, and deleting employee records with a modern UI.  
 
