@@ -36,10 +36,12 @@ cd EMS
 Edit src/main/resources/application.properties to match your MariaDB/MySQL setup.
 
 Example:
+```
 spring.datasource.url=jdbc:mariadb://localhost:3306/ems_db
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 spring.jpa.hibernate.ddl-auto=update
+```
 
 ### 3️⃣ Build & Run the Project
 ```bash
