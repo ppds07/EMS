@@ -4,7 +4,7 @@ A simple **Employee Management System** built with **Spring Boot, Thymeleaf, and
 
 ---
 
-## **📌 Features**  
+## **Features**  
 
 ✅ **Employee Management** – Add, edit, and delete employees.  
 ✅ **Bootstrap-based UI** – Responsive and professional-looking interface.  
@@ -15,7 +15,7 @@ A simple **Employee Management System** built with **Spring Boot, Thymeleaf, and
 
 ---
 
-## **⚙️ Tech Stack**  
+## **Tech Stack**  
 
 - **Backend:** Spring Boot, Spring MVC, Spring Data JPA  
 - **Frontend:** Thymeleaf, Bootstrap 5  
@@ -24,7 +24,7 @@ A simple **Employee Management System** built with **Spring Boot, Thymeleaf, and
 
 ---
 
-## 🛠️ Setup & Installation
+## Setup & Installation
 
 ### 1️⃣ Clone the Repository
 ```bash
